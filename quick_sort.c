@@ -10,10 +10,18 @@ int static compare (const void* a, const void* b)
         return 0;
 }
 
-int main() {
-  int arr[3] = {3, 1, 2};
-  
-  qsort(arr, n, sizeof(int), compare);
-  
-  return 0;
+qsort(arr, n, sizeof(int), compare);
+
+
+// Double
+int static compare (const void* a, const void* b)
+{
+    if (*(double*)a > *(double*)b)
+        return 1;
+    else if (*(double*)a < *(double*)b)
+        return -1;
+    else
+        return 0;
 }
+
+qsort(arr, n, sizeof(double), compare);
