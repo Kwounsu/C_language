@@ -6,3 +6,8 @@ fgets(s, 100, stdin);
 int len = strlen(s);
 while (s[len - 1] == '\n' || s[len - 1] == '\r')
     s[--len] = '\0';
+
+
+
+
+scanf("%[^\n]s", s); 
